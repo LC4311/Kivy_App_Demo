@@ -1,15 +1,50 @@
-AddLocationForm:
 
-<AddLocationForm@BoxLayout>:
-    orientation: "vertical"
+<MyLayout>:
+    rows:2
+    FloatLayout:
+        Button:
+            text: "Button 1"
+            size_hint: 0.1, 0.2
+            pos_hint: {"center_x": 0.5, "center_y":0.5}
+    FloatLayout:
+        Button:
+            text: "Button 2"
+            size_hint: 0.1, 0.3
+            pos: 350,250
+    RelativeLayout:
+        Button:
+            text: "Button 3"
+            size_hint: 0.1,0.3
+            pos_hint: {"right":1, "top":1}
+    RelativeLayout:
+        Button:
+            text: "Button 4"
+            size_hint: 0.6,0.6
+            pos: 0,0
+    GridLayout:
+        cols:3
+        spacing:10
+        Button:
+            text:"Button 5"
+
+        Button:
+            text:"Button 6"
+
+        Button:
+            text:"Button 7"
     BoxLayout:
-        TextInput:
+        orientation: "horizontal"
         Button:
-            text:"Search"
+            text:"Button 8"
         Button:
-            text:"Current Location"
-    RecycleView:
-        
-
-
-
+            text:"Button 9"
+            size_hint: 2 , 0.3
+            pos_hint: {"y":0.4}
+        Button:
+            text:"Button 10"
+        Button:
+            text:"Button 11"
+        Button:
+            text:"Button 12"
+        Button:
+            text:"Button 13"
