@@ -1,8 +1,13 @@
 from kivy.app import App
-from kivy.uix.gridlayout import GridLayout
+from kivy.lang import Builder
+from kivy.uix.anchorlayout import AnchorLayout
 
+Builder.load_file("toolbox.kv")
+Builder.load_file("drawingspace.kv")
+Builder.load_file("generaloptions.kv")
+Builder.load_file("statusbar.kv")
 
-class MyLayout(GridLayout):
+class MyLayout(AnchorLayout):
     pass
 
 
