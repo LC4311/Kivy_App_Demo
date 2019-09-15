@@ -1,0 +1,51 @@
+
+<DrawingBoard>:
+
+    canvas.before:
+        Color: 
+            rgba: 1,0,0,1
+        Rectangle: 
+            pos: self.width*0.6,self.height*0.6
+            size: 50,50
+
+
+    canvas:
+        Color:
+            rgba: 100/255,100/255,200/255,1
+        Ellipse:
+            size:50,50
+            pos:self.width*0.6,self.height*0.6
+        Rectangle:
+            size: self.width*0.3,self.height*0.15
+            pos: 0,0
+        Rectangle:
+            size: self.width*0.3,self.height*0.15
+            pos: self.width/3,0
+        Rectangle:
+            size: self.width*0.3,self.height*0.15
+            pos: self.width*(2/3),0
+        Color:
+            rgba: 1,1,0,0.5
+        Ellipse:
+            size: 80,80
+            pos: self.width*0.1,self.height*0.7
+            angle_start: 0
+            angle_end: 330
+        Color:
+            rgba: 1,1,1,1
+        Ellipse:
+            segments: 10
+            pos: self.width*0.7, self.height*0.7
+            size: 120,80
+        Triangle:
+            points: 100,100, 100,200, 300,700
+        Line:
+            points: self.width*0.5, self.height*0.5, 200, 300, 500,500, 500,0
+
+    canvas.after:
+        Color:
+            rgba: 0,1,0,1
+        Ellipse:
+            segments:4
+            size: 50,50
+            pos: self.width*0.6, self.height*0.6
