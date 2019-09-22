@@ -3,9 +3,15 @@
     orientation: "horizontal"
     padding: 2
     Button:
+        id: _clearbutton
         text:"Clear"
+        on_press: 
+            if self.text == "Clear": self.text = "Unclear"
+            else: self.text = "Clear"
     Button:
         text:"Remove"
+        on_press:
+            _drawingspace.clear_widgets()
     ToggleButton:
         text:"Group"
     Button:

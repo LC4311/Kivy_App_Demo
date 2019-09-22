@@ -4,13 +4,32 @@
     width: 48
     height: 48
     group: "tool"
+    canvas:
+        PushMatrix:
+        Translate:
+            xy: self.x, self.y
+    canvas.after: 
+        PopMatrix:
+
+
+
+        
 
 <ToolBox@GridLayout>:
     cols:2
     padding: 2
     ToolButton:
-        text:"O"
+        canvas:
+            Ellipse:
+                size: 16,16
+                pos: 15,15
+                angle_start: 120
+                angle_end: 420
     ToolButton:
-        text:"/"
+        canvas:
+            Point:
+                points: 12,30, 30,30
+                pointsize:5
+
     ToolButton:
-        text:"?"
+        StickMan:

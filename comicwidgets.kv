@@ -1,11 +1,19 @@
 
-<StickMan@RelativeLayout>
+<StickMan@RelativeLayout>:
     size_hint: None, None
     size: 48, 48
     canvas:
-        PushMatrix
+        PushMatrix:
+        Color:
+            rgba:1,0,0,1
+        Rotate:
+            angle:90
+            axis: 0,0,1
+            origin:24,24
+        
         Line:
             circle: 24, 38 ,5
+        PopMatrix:
         Line:
             points: 24,33, 24,15
         Line:
@@ -14,4 +22,4 @@
             points: 34,5, 24,15
         Line:
             points: 14,24, 34,24
-        PopMatrix
+        # PopMatrix:
