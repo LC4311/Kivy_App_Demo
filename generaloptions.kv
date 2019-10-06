@@ -1,4 +1,5 @@
 
+
 <GeneralOptions@BoxLayout>:
     orientation: "horizontal"
     padding: 2
@@ -11,7 +12,9 @@
     Button:
         text:"Remove"
         on_press:
-            _drawingspace.clear_widgets()
+            print(root.__dict__.keys())
+            
+            print(root._proxy_ref)
     ToggleButton:
         text:"Group"
     Button:
