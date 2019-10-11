@@ -1,8 +1,10 @@
+#:import c comicwidgets
+
 <DraggableWidget>:
     size_hint: None, None
 
 
-<StickMan@RelativeLayout>:
+<StickMan>:
     size_hint: None, None
     size: 48, 48
     canvas:
@@ -26,3 +28,14 @@
         Line:
             points: 14,24, 34,24
         # PopMatrix:
+
+<PacMan>:
+    size_hint: None, None
+    size: 48, 48
+    canvas:
+        Ellipse:
+            size: 16,16
+            pos: 15,15
+            angle_start: 120
+            angle_end: 420
+
