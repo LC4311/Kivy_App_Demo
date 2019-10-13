@@ -1,3 +1,5 @@
+#:import toolbox toolbox
+
 
 <ToolButton@ToggleButton>:
     size_hint: None, None
@@ -18,7 +20,8 @@
 <ToolBox@GridLayout>:
     cols:2
     padding: 2
-    ToolButton:
+    
+    PacManButton:
         canvas:
             Ellipse:
                 size: 16,16
@@ -31,5 +34,5 @@
                 points: 12,30, 30,30
                 pointsize:5
 
-    ToolButton:
+    StickManButton:
         StickMan:

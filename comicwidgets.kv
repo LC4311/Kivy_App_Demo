@@ -1,14 +1,25 @@
+#:import comicwidgets comicwidgets
+
+
 <DraggableWidget>:
     size_hint: None, None
 
+<PacMan>:
+    canvas:
+        Ellipse:
+            size: 16,16
+            pos: 15,15
+            angle_start: 120
+            angle_end: 420
 
-<StickMan@RelativeLayout>:
+
+<StickMan>:
     size_hint: None, None
     size: 48, 48
     canvas:
         PushMatrix:
         Color:
-            rgba:1,0,0,1
+            rgba:1,1,1,1
         Rotate:
             angle:90
             axis: 0,0,1

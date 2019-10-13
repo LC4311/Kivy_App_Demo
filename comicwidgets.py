@@ -2,9 +2,9 @@ from kivy.uix.relativelayout import RelativeLayout
 from kivy.graphics import Line
 
 class DraggableWidget(RelativeLayout):
-    def __init__(self):
-        self.selected = None
-        super().__init__()
+    def __init__(self,**kwargs):
+        self.selected = False
+        super().__init__(**kwargs)
     
     def select(self):
         if self.selected == False:
@@ -23,7 +23,7 @@ class DraggableWidget(RelativeLayout):
     def on_touch_move(self,touch):
         x = self.parent.to_parent(touch.x,touch.y)[0]
         y = self.parent.to_parent(touch.x,touch.y)[1]
-        if self.selected == True and self.parent.collide_point(x-self.width/2, y - self.height/2):
+        if self.selected and self.parent.collide_point(x-self.width/2, y - self.height/2):
             self.translate(touch.x-self.ix,touch.y-self.iy)
             return True
         return super().on_touch_move(touch)
@@ -35,18 +35,19 @@ class DraggableWidget(RelativeLayout):
         self.iy += y
     
     def on_touch_up(self,touch):
-        if self.selected == True:
+        if self.selected:
             self.unselect()
             return True
         return super().on_touch_up(touch)
     
     def unselect(self):
-        if self.selected == True:
+        if self.selected:
             self.canvas.remove(self.selected)
-            self.selected = None
+            self.selected = False
 
 
 class StickMan(DraggableWidget):
     pass
         
-
+class PacMan(DraggableWidget):
+    pass
